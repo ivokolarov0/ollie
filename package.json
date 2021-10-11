@@ -12,8 +12,7 @@
     "sass": "^1.42.1",
     "sass-loader": "10.1.1",
     "vue": "^2.6.11",
-    "vue-color": "^2.8.1",
-    "vuex": "^3.4.0"
+    "vue-color": "^2.8.1"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "~4.5.0",
