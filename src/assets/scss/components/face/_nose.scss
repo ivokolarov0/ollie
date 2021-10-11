@@ -1,0 +1,49 @@
+.nose {
+  position: absolute;
+  top: 62%;
+  left: 50%;
+  width: 20%;
+  padding-bottom: 10%;
+  transform: translateX(-50%);
+
+  &:before,
+  &:after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    width: 35%;
+    padding-bottom: 35%;
+    background-color: var(--c-black);
+    border-radius: 50%;
+    transform: translateY(-50%) scale(0);
+  }
+
+  &:before {
+    left: 10%;
+  }
+
+  &:after {
+    right: 10%;
+  }
+}
+
+.is-wangy {
+  .nose {
+    &:before,
+    &:after {
+      animation: wangy 0.3s infinite;
+    }
+  }
+}
+
+@keyframes wangy {
+  0%,
+  100% {
+    transform: translateY(-50%) scale(0);
+  }
+
+  50% {
+    top: 92%;
+    transform: translateY(-50%) scale(0.8);
+  }
+}

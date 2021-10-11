@@ -1,0 +1,150 @@
+.cockroach {
+  position: fixed;
+  right: 100px;
+  bottom: 100px;
+  width: 30px;
+  padding-bottom: 15px;
+  transform: rotate(45deg);
+  opacity: 0;
+  transition: all 1s;
+
+  .cockroach__speech {
+    position: absolute;
+    bottom: 100%;
+    left: -30px;
+    width: 2px;
+    height: 30px;
+    background-color: #000;
+    transform: rotate(-45deg);
+    opacity: 0;
+    transition: opacity 0.3s 2s;
+
+    .cockroach__speech-board {
+      position: absolute;
+      bottom: 100%;
+      left: 50%;
+      display: grid;
+      align-items: center;
+      justify-content: center;
+      width: 100px;
+      height: 50px;
+      border: 2px solid #000;
+      transform: translateX(-50%);
+      text-align: center;
+      font-size: 16px;
+    }
+  }
+
+  .cockroach__body {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background-color: #000;
+
+    .cockroach__leg {
+      position: absolute;
+      width: 100%;
+      height: 50%;
+
+      &:after,
+      &:before {
+        content: '';
+        position: absolute;
+        width: 2px;
+        height: 15px;
+        background-color: #000;
+      }
+
+      &--left {
+        top: 50%;
+        right: 0;
+
+        &:nth-child(2) {
+          right: -10px;
+          top: 65%;
+        }
+        &:nth-child(3) {
+          right: -20px;
+          top: 45%;
+        }
+
+        &:before {
+          right: 83%;
+          transform: rotate(35deg);
+        }
+
+        &:after {
+          top: 81%;
+          right: 77%;
+          transform: rotate(80deg);
+          height: 15px;
+        }
+      }
+
+      &--right {
+        bottom: 50%;
+        left: 0;
+
+        &:nth-child(5) {
+          left: -9px;
+          bottom: 65%;
+        }
+        &:nth-child(6) {
+          left: 10px;
+        }
+
+        &:before {
+          right: 60%;
+          bottom: 30%;
+          transform: rotate(-35deg);
+        }
+
+        &:after {
+          bottom: 108%;
+          right: 51%;
+          transform: rotate(80deg);
+          height: 15px;
+        }
+      }
+    }
+  }
+
+  .cockroach__head {
+    position: absolute;
+    right: 100%;
+    top: 50%;
+    width: 15px;
+    height: 100%;
+    border-radius: 50%;
+    transform: translate(5px, -50%);
+    background-color: #000;
+
+    &:before,
+    &:after {
+      content: '';
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      border-top: 1px solid #000;
+      border-radius: 40%;
+      right: 50%;
+    }
+
+    &:before {
+      top: 10px;
+      transform: rotate(-35deg);
+    }
+  }
+}
+
+.is-cockroach {
+  .cockroach {
+    opacity: 1;
+    transform: rotate(45deg) translate(-45px, -5px);
+
+    .cockroach__speech {
+      opacity: 1;
+    }
+  }
+}

@@ -1,0 +1,59 @@
+.utils-holder {
+  .utils {
+    position: fixed;
+    top: 0;
+    right: 0;
+    transform: translateX(100%);
+    transition: transform 0.3s;
+    padding: 10px 20px;
+
+    .utils__toggle {
+      position: absolute;
+      right: 100%;
+      top: 30px;
+      width: 15px;
+      height: 15px;
+      background: none;
+      border: 0;
+      border-left: 2px solid #000;
+      border-bottom: 2px solid #000;
+      transform: rotate(45deg) translateX(-15px);
+      cursor: pointer;
+    }
+
+    &.is-active {
+      transform: translateX(0);
+
+      .utils__toggle {
+        border: 0;
+        border-right: 2px solid #000;
+        border-top: 2px solid #000;
+      }
+    }
+
+    ul {
+      padding: 0;
+      margin: 0;
+      list-style: none;
+    }
+
+    li {
+      margin-bottom: 10px;
+
+      button {
+        display: block;
+        width: 100%;
+        padding: 5px 10px;
+        background-color: #d4333f;
+        border: 0;
+        color: #fff;
+        transition: all 0.3s;
+        cursor: pointer;
+
+        &:hover {
+          background-color: #a61f29;
+        }
+      }
+    }
+  }
+}

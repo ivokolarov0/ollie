@@ -1,0 +1,211 @@
+.shoe {
+  position: absolute;
+  bottom: 0%;
+  left: -1%;
+  width: 97%;
+  padding-bottom: 140%;
+  overflow: hidden;
+  transform: rotate(4deg);
+  border-radius: 0 0 50% 50%;
+
+  .shoe__inner {
+    position: absolute;
+    top: 0%;
+    left: -23%;
+    width: 140%;
+    padding-bottom: 120%;
+    border-bottom: 3px solid var(--c-shoe-bottom);
+    border-left: 3px solid transparent;
+    border-radius: 50%;
+    overflow: hidden;
+  }
+
+  .fingers {
+    position: absolute;
+    bottom: 1%;
+    left: 10%;
+    width: 65%;
+    padding-bottom: 33%;
+    background-color: var(--c-shoe-left-color);
+    border-radius: 0 0 50% 50%;
+    transform: rotate(10deg);
+
+    .finger {
+      position: absolute;
+
+      &:nth-child(1) {
+        left: 6%;
+        top: 33%;
+        width: 40%;
+        padding-bottom: 23%;
+        background-color: var(--c-shoe-sock-shadow);
+        border-radius: 50%;
+        transform: rotate(15deg);
+      }
+
+      &:nth-child(2) {
+        right: 11%;
+        top: 42%;
+        width: 25%;
+        padding-bottom: 14%;
+        background-color: rgba(#fff, 0.8);
+        border-radius: 50%;
+        transform: rotate(-18deg);
+      }
+    }
+  }
+
+  .shoe-top {
+    position: absolute;
+    top: 18%;
+    left: -12%;
+    width: 90%;
+    height: 83%;
+    background-color: var(--c-shoe-left-color);
+    border-radius: 5% 0 0 5%;
+    transform: rotate(-5deg) skewY(8deg);
+
+    .shoe-top__inner {
+      position: absolute;
+      top: -20%;
+      left: 50%;
+      width: 58%;
+      padding-bottom: 40%;
+      background-color: var(--c-shoe-left-color);
+      border-radius: 30% 0 0 0;
+    }
+  }
+
+  .shoe__ribbon {
+    position: absolute;
+    top: 13%;
+    left: 8%;
+    width: 70%;
+    padding-bottom: 60%;
+
+    .ribbons {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      padding-bottom: 72%;
+
+      &:before {
+        content: '';
+        position: absolute;
+        top: 30%;
+        left: -1%;
+        width: 113%;
+        padding-bottom: 5%;
+        background-color: var(--c-shoe-ribbon);
+        transform: rotate(-5deg);
+        z-index: 2;
+      }
+
+      &:after {
+        content: '';
+        position: absolute;
+        top: 10%;
+        left: 50%;
+        width: 25%;
+        padding-bottom: 25%;
+        background-color: var(--c-shoe-ribbon);
+        border-radius: 50%;
+        transform: translateX(-15%);
+        box-shadow: 0 0 5px rgba(#000, 0.5), inset 0 0 1px rgba(#000, 0.5);
+        z-index: 2;
+      }
+
+      .ribbon {
+        position: absolute;
+        padding-bottom: 50%;
+        border-radius: 50%;
+        width: 50%;
+        overflow: hidden;
+
+        &:nth-child(1) {
+          right: -7%;
+          top: 2%;
+        }
+
+        &:nth-child(2) {
+          left: 6%;
+          top: -8%;
+          transform: rotate(167deg);
+          transform-origin: center center;
+        }
+
+        .ribbon__outer {
+          position: absolute;
+          top: -25%;
+          right: 1%;
+          width: 100%;
+          padding-bottom: 100%;
+          border-radius: 50%;
+          overflow: hidden;
+        }
+
+        .ribbon__inner {
+          position: absolute;
+          left: -21%;
+          top: 22%;
+          width: 100%;
+          padding-bottom: 80%;
+          background-color: var(--c-shoe-ribbon);
+          border-radius: 50%;
+
+          &:after {
+            content: '';
+            position: absolute;
+            top: 15%;
+            left: 25%;
+            width: 70%;
+            height: 64%;
+            background-color: var(--c-shoe-left-color);
+            transform-origin: center center;
+            transform: scale(0.9);
+            border-radius: 50%;
+          }
+        }
+      }
+    }
+  }
+
+  .laces {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    width: 68%;
+    padding-bottom: 80%;
+    transform: translateX(-40%);
+
+    .lace {
+      position: absolute;
+      top: 0;
+
+      &:nth-child(1) {
+        left: 50%;
+        width: 24%;
+        height: 80%;
+        transform: translateX(-50%) skewY(-25deg);
+        background-color: var(--c-shoe-ribbon);
+      }
+
+      &:nth-child(2) {
+        left: 27%;
+        width: 10%;
+        height: 60%;
+        background-color: var(--c-shoe-ribbon);
+        transform: rotate(25deg);
+      }
+
+      &:nth-child(3) {
+        right: 27%;
+        width: 10%;
+        height: 60%;
+        background-color: var(--c-shoe-ribbon);
+        transform: rotate(-25deg);
+      }
+    }
+  }
+}

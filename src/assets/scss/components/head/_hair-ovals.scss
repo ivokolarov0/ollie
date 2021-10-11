@@ -1,0 +1,51 @@
+.hair-ovals {
+  position: absolute;
+  left: 0%;
+  top: 0%;
+  width: 100%;
+  height: 112%;
+  border-radius: 50%;
+  overflow: hidden;
+
+  .hair-ovals__inner {
+    position: absolute;
+    top: -2px;
+    left: 0;
+    width: 100%;
+    height: 120%;
+    border-radius: 50%;
+    overflow: hidden;
+  }
+
+  .hair-oval {
+    &:nth-child(1) {
+      position: absolute;
+      top: 1%;
+      left: 44%;
+      width: 48%;
+      padding-bottom: 38%;
+      background-color: var(--c-hair-base-color-fd);
+      transform: rotate(29deg);
+    }
+
+    &:nth-child(2) {
+      position: absolute;
+      top: -24%;
+      right: 53%;
+      width: 50%;
+      padding-bottom: 70%;
+      background-color: var(--c-hair-silver-e7);
+      transform: rotate(29deg);
+    }
+
+    &:nth-child(3) {
+      position: absolute;
+      left: 8%;
+      top: -7%;
+      width: 30%;
+      padding-bottom: 50%;
+      transform: rotate(33deg);
+      background-color: var(--c-hair-pink-ee);
+    }
+  }
+}

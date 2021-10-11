@@ -1,0 +1,60 @@
+.mouth {
+  position: absolute;
+  bottom: 19%;
+  left: 50%;
+  transform: translateX(-53%);
+  width: 28%;
+  padding-bottom: 20%;
+  background-color: green;
+  border-radius: 50%;
+  background-color: var(--c-mouth-base-a4);
+  box-shadow: inset 0 6px 0 -1px rgba(#000, 0.35);
+
+  &:before {
+    content: '';
+    top: 0;
+    left: 50%;
+    position: absolute;
+    width: 10%;
+    padding-bottom: 10%;
+    transform: rotate(45deg) translate(-88%, -22%);
+    border-radius: 40%;
+    background-color: var(--c-skin-base-color-e5);
+  }
+}
+
+.is-bobbing {
+  .mouth {
+    animation: hide_mouth 0.3s infinite;
+  }
+}
+
+.is-wangy {
+  .mouth {
+    animation: move_mouth 0.3s infinite;
+  }
+}
+
+@keyframes move_mouth {
+  0%,
+  100% {
+    padding-bottom: 20%;
+    transform: translateX(-53%) translateY(0);
+  }
+
+  50% {
+    padding-bottom: 3%;
+    transform: translateX(-53%) translateY(-110%);
+  }
+}
+
+@keyframes hide_mouth {
+  0%,
+  100% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
+  }
+}

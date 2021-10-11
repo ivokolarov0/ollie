@@ -1,0 +1,107 @@
+.IRyS {
+  position: absolute;
+  left: 30%;
+  top: -19%;
+  width: 54%;
+  padding-bottom: 72%;
+  border-radius: 50%;
+  background-color: var(--c-eye-red-af);
+  transform: rotate(-13deg);
+  z-index: 3;
+  overflow: hidden;
+
+  &--left {
+    &:after {
+      content: '';
+      position: absolute;
+      top: 63%;
+      left: 7%;
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      background-color: var(--c-eye-grey-9f);
+      box-shadow: inset 2px 3px 2px 1px var(--c-eye-green-48);
+    }
+
+    .eye_spot {
+      position: absolute;
+      background-color: rgba(var(--c-eye-brown-spot-59), 0.6);
+
+      &--left {
+        top: 23%;
+        left: -32%;
+        width: 45%;
+        padding-bottom: 48%;
+        transform: rotate(67deg);
+        box-shadow: 0 0 1px rgb(89 18 22 / 60%);
+        z-index: 2;
+      }
+
+      &--right {
+        top: 25%;
+        right: -25%;
+        width: 41%;
+        padding-bottom: 40%;
+        transform: rotate(63deg);
+        box-shadow: 0 0 1px var(--c-eye-brown-spot-59);
+        z-index: 2;
+        opacity: 0.3;
+      }
+    }
+  }
+
+  &--right {
+    top: 50%;
+    left: 50%;
+    transform: translate(-70%, -50%) rotate(15deg);
+    width: 54%;
+    padding-bottom: 54%;
+    background-color: var(--c-eye-yellow-df);
+    border: 1px solid var(--c-eye-border-c0);
+    box-shadow: inset -1px 9px 0 0px rgba(var(--c-eye-yellow-shadow-9e), 0.8);
+
+    &:before,
+    &:after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 60%;
+      padding-bottom: 9%;
+      background-color: var(--c-eye-black-17);
+      border-radius: 30%;
+    }
+
+    &:before {
+      transform: translate(-50%, -50%) rotate(45deg);
+    }
+
+    &:after {
+      transform: translate(-50%, -50%) rotate(-45deg);
+    }
+  }
+
+  .IRyS__inner {
+    position: absolute;
+    top: 62%;
+    left: 36%;
+    width: 40%;
+    padding-bottom: 40%;
+    transform: rotate(37deg) translate(-50%, -50%);
+    background-color: var(--c-eye-red-54);
+    z-index: 2;
+    box-shadow: 0 0 1px rgba(#fff, 0.6);
+  }
+
+  .IRyS__circle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 20%;
+    padding-bottom: 20%;
+    border-radius: 50%;
+    background-color: var(--c-black);
+    box-shadow: 0 0 0 1px var(--c-eye-yellow-b4);
+  }
+}

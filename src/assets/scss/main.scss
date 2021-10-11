@@ -1,0 +1,39 @@
+@import './general/variables';
+
+@import './components/head/head';
+@import './components/head/head__bow-tie';
+@import './components/head/bow-tie';
+@import './components/head/hair';
+@import './components/head/hair-ovals';
+@import './components/head/hair-buns';
+@import './components/head/hair-loop';
+@import './components/head/hair-stray';
+@import './components/face/face';
+@import './components/face/mouth';
+@import './components/face/eyes';
+@import './components/face/eyelids';
+@import './components/face/IRyS';
+@import './components/face/eyebrows';
+@import './components/face/blush';
+@import './components/face/nose';
+@import './components/neck/neck';
+@import './components/neck/heart';
+@import './components/body/body';
+@import './components/body/arms';
+@import './components/body/arm-ribbon';
+@import './components/body/legs';
+@import './components/body/shoe';
+@import './components/body/dress-middle';
+@import './components/body/dress-top';
+@import './components/body/front-ribbon';
+@import './components/colors/colors';
+@import './components/cockroach/cockroach';
+
+@import './utils';
+@import './colors';
+@import './ollie';
+
+body {
+  padding: 0;
+  margin: 0;
+}

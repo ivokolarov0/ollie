@@ -1,0 +1,41 @@
+.head {
+  position: relative;
+  height: 50%;
+  width: 100%;
+  margin: 0 auto;
+  z-index: 10;
+}
+
+.is-bobbing {
+  .head {
+    animation: move 0.3s linear infinite;
+  }
+}
+
+.is-wangy {
+  .head {
+    animation: headRotate 0.3s infinite;
+  }
+}
+
+@keyframes move {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(3%);
+  }
+}
+
+@keyframes headRotate {
+  0%,
+  100% {
+    transform: rotate(1deg);
+  }
+
+  50% {
+    transform: rotate(-1deg);
+  }
+}

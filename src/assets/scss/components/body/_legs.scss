@@ -1,0 +1,361 @@
+.legs {
+  position: absolute;
+  top: 12%;
+  left: 50%;
+  width: 40%;
+  padding-bottom: 88%;
+  transform: translateX(-45%) perspective(10px) rotateX(-3deg);
+  overflow: hidden;
+  z-index: 2;
+
+  .leg {
+    top: 0;
+    position: absolute;
+    width: 30%;
+    padding-bottom: 158%;
+    overflow: hidden;
+
+    &--left {
+      transform: rotate(-5deg);
+      left: 12%;
+
+      .leg__inner {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 79%;
+        overflow: hidden;
+        border-left: 1px solid var(--c-leg-border);
+        border-right: 1px solid var(--c-leg-border);
+        background-color: var(--c-leg-grey);
+      }
+
+      .leg__top-flesh {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 71%;
+        background-color: var(--c-leg-pink-flesh);
+      }
+
+      .leg__bandages {
+        position: absolute;
+        top: 65%;
+        left: 0;
+        right: 0;
+        bottom: 0;
+
+        .leg__bandage {
+          position: absolute;
+
+          &:nth-child(1) {
+            top: 4%;
+            right: -25%;
+            width: 78%;
+            padding-bottom: 30%;
+            background-color: var(--c-leg-bandage);
+            transform: rotate(-25deg);
+            box-shadow: 0 -1px 1px 0 rgba(#000, 0.2);
+          }
+
+          &:nth-child(2) {
+            top: 12%;
+            left: -5%;
+            width: 115%;
+            height: 40%;
+            transform: skewY(20deg);
+            overflow: hidden;
+            box-shadow: 0 -2px 1px -1px rgba(#000, 0.2);
+
+            &:after {
+              content: '';
+              position: absolute;
+              top: -22%;
+              left: 0;
+              width: 100%;
+              padding-bottom: 43%;
+              background-color: var(--c-leg-bandage);
+              transform: skewY(-11deg);
+            }
+          }
+
+          &:nth-child(3) {
+            top: -98%;
+            left: -110%;
+            width: 310%;
+            padding-bottom: 250%;
+            border-radius: 50%;
+            border-bottom: 15px solid var(--c-leg-bandage);
+
+            .leg__bandage-stich {
+              position: absolute;
+
+              &:nth-child(1) {
+                left: 43%;
+                bottom: -2%;
+                width: 3%;
+                padding-bottom: 5%;
+                background-color: var(--c-skin-stich-color-83);
+              }
+
+              &:nth-child(2) {
+                left: 49%;
+                bottom: -2%;
+                width: 1.5%;
+                padding-bottom: 4%;
+                background-color: var(--c-skin-stich-color-83);
+              }
+
+              &:nth-child(3) {
+                right: 35%;
+                bottom: -1%;
+                width: 1.5%;
+                padding-bottom: 4%;
+                background-color: var(--c-skin-stich-color-83);
+              }
+            }
+          }
+
+          &:nth-child(4) {
+            top: -82%;
+            left: -110%;
+            width: 440%;
+            padding-bottom: 250%;
+            border-radius: 50%;
+            border-bottom: 15px solid var(--c-leg-bandage);
+            box-shadow: inset 0 -1px 1px -1px rgba(#000, 0.3);
+          }
+        }
+      }
+    }
+
+    &--right {
+      right: 12%;
+      transform: rotate(1deg);
+
+      .leg__inner {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 90%;
+        overflow: hidden;
+        border-left: 1px solid var(--c-leg-border);
+        border-right: 1px solid var(--c-leg-border);
+        background-color: var(--c-leg-grey);
+        border-radius: 0 0 20% 20%;
+
+        &:after {
+          content: '';
+          bottom: 3%;
+          right: -11%;
+          position: absolute;
+          width: 40%;
+          padding-bottom: 20%;
+          background-color: var(--c-shoe-red);
+          transform: rotate(-45deg);
+        }
+      }
+
+      .leg-shoe {
+        position: absolute;
+        bottom: 4%;
+        left: 7%;
+        width: 85%;
+        padding-bottom: 80%;
+        border-radius: 0 0 40% 40%;
+        border-bottom: 3px solid var(--c-shoe-bottom2);
+        transform: rotate(-15deg);
+        overflow: hidden;
+
+        .leg-shoe__inner {
+          position: absolute;
+          top: 10%;
+          left: -44%;
+          width: 150%;
+          padding-bottom: 120%;
+          border-radius: 50%;
+          transform: rotate(37deg);
+          overflow: hidden;
+        }
+
+        .leg-shoe__inner-left {
+          position: absolute;
+          left: 17%;
+          top: -23%;
+          width: 100%;
+          padding-bottom: 80%;
+          border-radius: 20%;
+          background-color: var(--c-shoe-red);
+          transform: rotate(-32deg);
+          box-shadow: inset -3px -2px 10px 1px rgba(255, 255, 255, 0.3);
+          overflow: hidden;
+
+          &:after {
+            content: '';
+            position: absolute;
+            left: -5%;
+            top: 21%;
+            width: 40%;
+            padding-bottom: 10%;
+            background-color: var(--c-leg-bandage-pink);
+            transform: rotate(15deg);
+            border-radius: 40%;
+          }
+        }
+      }
+
+      .leg-stiches {
+        position: absolute;
+        bottom: 21%;
+        left: -35%;
+        width: 180%;
+        height: 23%;
+        transform: rotate(34deg);
+        z-index: 5;
+
+        .leg-stich {
+          position: absolute;
+          width: 2%;
+          border-radius: 50%;
+          background-color: var(--c-arm-stiches3);
+
+          &:nth-child(1) {
+            top: 10%;
+            left: 10%;
+            padding-bottom: 10%;
+          }
+
+          &:nth-child(2) {
+            top: 12%;
+            left: 21%;
+            padding-bottom: 8%;
+          }
+
+          &:nth-child(3) {
+            top: 16%;
+            left: 32%;
+            padding-bottom: 8%;
+          }
+
+          &:nth-child(4) {
+            top: 19%;
+            left: 38%;
+            padding-bottom: 8%;
+          }
+
+          &:nth-child(5) {
+            top: 20%;
+            left: 53%;
+            padding-bottom: 8%;
+          }
+
+          &:nth-child(6) {
+            top: 23%;
+            left: 66%;
+            padding-bottom: 8%;
+          }
+
+          &:nth-child(7) {
+            top: 75%;
+            left: 66%;
+            padding-bottom: 8%;
+          }
+
+          &:nth-child(8) {
+            top: 75%;
+            left: 56%;
+            padding-bottom: 8%;
+          }
+
+          &:nth-child(9) {
+            top: 73%;
+            left: 36%;
+            padding-bottom: 8%;
+          }
+
+          &:nth-child(10) {
+            top: 66%;
+            left: 27%;
+            padding-bottom: 8%;
+          }
+        }
+      }
+
+      .leg__bandages {
+        .leg__bandage {
+          position: absolute;
+
+          &:nth-child(1) {
+            top: 31%;
+            left: -8%;
+            width: 250%;
+            padding-bottom: 250%;
+            background-color: var(--c-leg-bandage);
+            border-radius: 50%;
+            overflow: hidden;
+
+            &:after {
+              content: '';
+              position: absolute;
+              top: 63%;
+              left: 47%;
+              width: 170%;
+              padding-bottom: 70%;
+              background-color: var(--c-leg-grey);
+              border-radius: 50%;
+              transform: rotate(36deg) translateX(-50%);
+            }
+          }
+
+          &:nth-child(2) {
+            top: 88%;
+            right: -28%;
+            width: 150%;
+            padding-bottom: 50%;
+            background-color: var(--c-leg-bandage-pink);
+            transform: rotate(-39deg);
+          }
+
+          .leg-stich {
+            position: absolute;
+
+            &:nth-child(1) {
+              right: 3%;
+              top: -15%;
+              width: 3%;
+              padding-bottom: 10%;
+              background-color: var(--c-arm-stiches3);
+            }
+
+            &:nth-child(2) {
+              right: 13%;
+              top: -15%;
+              width: 3%;
+              padding-bottom: 10%;
+              background-color: var(--c-arm-stiches3);
+            }
+
+            &:nth-child(3) {
+              right: 30%;
+              top: -17%;
+              width: 3%;
+              padding-bottom: 10%;
+              background-color: var(--c-arm-stiches3);
+            }
+
+            &:nth-child(4) {
+              right: 40%;
+              top: -13%;
+              width: 3%;
+              padding-bottom: 6%;
+              background-color: var(--c-arm-stiches3);
+            }
+          }
+        }
+      }
+    }
+  }
+}

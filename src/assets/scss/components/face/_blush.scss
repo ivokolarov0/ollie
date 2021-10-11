@@ -1,0 +1,21 @@
+.blush {
+  position: absolute;
+
+  &--left {
+    left: -8%;
+    top: 69%;
+    width: 40%;
+    padding-bottom: 18%;
+    transform: rotate(38deg);
+    background: radial-gradient(#e5b8c0 0%, transparent 60%);
+  }
+
+  &--right {
+    right: 3%;
+    top: 71%;
+    width: 40%;
+    padding-bottom: 18%;
+    transform: rotate(-17deg);
+    background: radial-gradient(#e5b8c0 0%, transparent 60%);
+  }
+}
