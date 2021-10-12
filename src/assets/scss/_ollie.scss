@@ -6,6 +6,10 @@
   overflow: hidden;
   transform-origin: center center;
 
+  @media (max-width: 767px) {
+    align-items: flex-end;
+  }
+
   .ollie__inner {
     width: 214px;
     height: 339px;

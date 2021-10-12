@@ -8,6 +8,11 @@
   opacity: 0;
   transition: all 1s;
 
+  @media (max-width: 767px) {
+    right: -10px;
+    bottom: -10px;
+  }
+
   .cockroach__speech {
     position: absolute;
     bottom: 100%;
