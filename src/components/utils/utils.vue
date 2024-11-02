@@ -9,16 +9,19 @@
           <button @click="$emit('bob')">Thank you</button>
         </li>
         <li>
-          <button @click="handleWangyClick">Wangy-Wangy</button>
-          <audio :src="wangySrc" loop preload="true" ref="audioWangy"></audio>
+          <button @click="handleAudio($refs.audioWangy, 'wangy')">Wangy-Wangy</button>
+          <audio
+            :src="wangySrc"
+            preload="true"
+            ref="audioWangy"
+          ></audio>
         </li>
         <li>
-          <button @click="handleCockroachClick">Biggest Fan!</button>
+          <button @click="handleAudio($refs.audioCockroach, 'cockroach')">Biggest Fan!</button>
           <audio
             :src="cockroachSrc"
             preload="true"
             ref="audioCockroach"
-            @ended="cockroach = false"
           ></audio>
         </li>
       </ul>
@@ -38,39 +41,52 @@ export default {
   },
 
   data: () => ({
-    active: false,
-    wangy: false,
+    states: ['cockroach', 'wangy'],
     cockroach: false,
+    wangy: false,
+    active: false,
     wangySrc: require('../../assets/audio/wangy.mp3'),
     cockroachSrc: require('../../assets/audio/cockroach.mp3'),
   }),
 
   methods: {
-    handleWangyClick() {
-      this.wangy = !this.wangy;
-      this.$emit('wangy');
-      if (this.wangy) {
-        this.$refs.audioWangy.play();
-      } else {
-        this.$refs.audioWangy.pause();
-        this.$refs.audioWangy.currentTime = 0;
-      }
-    },
-
-    handleCockroachClick() {
-      this.cockroach = !this.cockroach;
-      this.$emit('cockroach');
-      if (this.cockroach) {
-        this.$refs.audioCockroach.play();
-      } else {
-        this.$refs.audioCockroach.pause();
-        this.$refs.audioCockroach.currentTime = 0;
-      }
+    handleAudio(target, key) {
+      this[key] = !this[key];
+      if (this[key]) {
+          target.play();
+        } else {
+          target.pause();
+          target.currentTime = 0;
+        }
     },
 
     toggle() {
       this.active = !this.active;
     },
   },
+
+  mounted() {
+    const items = [
+      [this.$refs.audioWangy, 'wangy'],
+      [this.$refs.audioCockroach, 'cockroach']
+    ];
+    items.forEach(([item, emit]) => {
+      item.addEventListener('play', () => {
+        const others = items.filter(item => item[1] != emit);
+        others.map(([item, key]) => {
+          if(this[key]) {
+            this[key] = false;
+            item.pause();
+            item.currentTime = 0;
+          }
+        });
+        this.$emit(emit, true);
+      })
+      item.addEventListener('pause', () => {
+        this.$emit(emit, false);
+        this[emit] = false;
+      })
+    })
+  }
 };
 </script>

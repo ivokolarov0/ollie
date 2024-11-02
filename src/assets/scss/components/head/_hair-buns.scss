@@ -157,7 +157,8 @@
 
         span {
           position: absolute;
-          background-color: var(--c-hair-light-ff);
+          background-color: #fff;
+          opacity: .7;
 
           &:nth-child(1) {
             position: absolute;
@@ -166,8 +167,8 @@
             width: 24%;
             padding-bottom: 23%;
             border-radius: 50%;
-            box-shadow: 0 0 2px 2px var(--c-hair-light-ff),
-              -1px 4px 2px 2px rgba(var(--c-hair-light-ff), 0.7);
+            box-shadow: 0 0 2px 2px #fff,
+              -1px 4px 2px 2px rgba(255,255,255, 0.7);
           }
 
           &:nth-child(2) {
@@ -178,9 +179,9 @@
             padding-bottom: 34%;
             transform: rotate(36deg);
             border-radius: 40%;
-            box-shadow: 0 0 2px 2px var(--c-hair-light-ff),
-              2px -2px 2px 2px rgba(var(--c-hair-light-ff), 0.5),
-              2px 3px 3px 3px rgba(var(--c-hair-light-ff), 0.7);
+            box-shadow: 0 0 2px 2px #fff,
+              2px -2px 2px 2px rgba(255,255,255, 0.5),
+              2px 3px 3px 3px rgba(255,255,255, 0.7);
           }
         }
       }

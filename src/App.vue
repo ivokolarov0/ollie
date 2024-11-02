@@ -2,8 +2,8 @@
   <div id="app">
     <Utils
       @bob="is_bobing = !is_bobing"
-      @wangy="is_wangy = !is_wangy"
-      @cockroach="handleCockroach"
+      @wangy="is_wangy = $event"
+      @cockroach="is_cockroach = $event"
     />
     <div
       class="ollie"
@@ -51,12 +51,8 @@ export default {
   }),
 
   methods: {
-    handleCockroach() {
-      this.is_cockroach = !this.is_cockroach;
-      clearTimeout(this.cockroachTimeout);
-      this.cockroachTimeout = setTimeout(() => {
-        this.is_cockroach = false;
-      }, 14000);
+    handleCockroach(value) {
+      this.is_cockroach = value;
     },
   },
 };

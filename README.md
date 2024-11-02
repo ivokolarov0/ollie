@@ -1,24 +1,10 @@
-# code
+# CSS only character
 
-## Project setup
-```
-yarn install
-```
+Character: https://virtualyoutuber.fandom.com/wiki/Kureiji_Ollie
 
-### Compiles and hot-reloads for development
-```
-yarn serve
-```
+Audio context:
+https://www.youtube.com/watch?v=YW6v8soA7oQ
+https://www.youtube.com/watch?v=VJzfiyj2jpk
 
-### Compiles and minifies for production
-```
-yarn build
-```
-
-### Lints and fixes files
-```
-yarn lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+Timelaps:
+https://www.youtube.com/watch?v=Q_DEXSmBUa0
